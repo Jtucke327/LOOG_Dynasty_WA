@@ -9,7 +9,7 @@ const PORT = process.env.PORT || 5000;
 app.disable('x-powered-by');
 //Will update once I have domain name
 app.use(cors({
-  origin: ['https://league-of-ordinary-gentlemen.netlify.app'],
+  origin: 'https://league-of-ordinary-gentlemen.netlify.app'
 }));
 app.use(express.json());
 
