@@ -15,16 +15,17 @@ function HomePage({ leagueId, userRosterId }) {
     brown: '#6f4f2e'
   };
 
+  const BACKEND_URL = 'https://loog-dynasty-wa.onrender.com';
   useEffect(() => {
-    fetch('/api/announcements')
-      .then(res => res.json())
-      .then(data => setMessages(data))
-      .catch(err => console.error('Error fetching announcements:', err));
-
-    fetch('/api/events')
-      .then(res => res.json())
-      .then(data => setEvents(data))
-      .catch(err => console.error('Error fetching events:', err));
+    fetch(`${BACKEND_URL}/api/announcements`)
+    .then(res => res.json())
+    .then(data => setMessages(data))
+    .catch(err => console.error('Error fetching announcements:', err));
+    
+    fetch(`${BACKEND_URL}/api/events`)
+    .then(res => res.json())
+    .then(data => setEvents(data))
+    .catch(err => console.error('Error fetching events:', err));
   }, []);
 
   return (
