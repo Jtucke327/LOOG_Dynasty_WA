@@ -10,13 +10,13 @@ function LeagueMatchupBanner({ leagueId }) {
   const backendUrl = process.env.REACT_APP_BACKEND_URL || 'http://localhost:5000';
 
   useEffect(() => {
-    fetch(`${backendUrl}/api/league-matchups/${leagueId}`)
-      .then((res) => res.json())
-      .then((data) => {
-        setMatchups(data.matchups);
-      })
-      .catch((err) => console.error('Error loading matchups:', err));
-  }, [leagueId]);
+  fetch(`${backendUrl}/api/league-matchups/${leagueId}`)
+    .then((res) => res.json())
+    .then((data) => {
+      setMatchups(data.matchups);
+    })
+    .catch((err) => console.error('Error loading matchups:', err));
+}, [leagueId, backendUrl]);
 
   // Measure width of one set of matchups after render/layout
   useLayoutEffect(() => {
