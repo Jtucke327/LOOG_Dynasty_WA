@@ -7,8 +7,10 @@ function LeagueMatchupBanner({ leagueId }) {
   // Ref for the *single* matchup set (not duplicated)
   const singleSetRef = useRef(null);
 
+  const backendUrl = process.env.REACT_APP_BACKEND_URL || 'http://localhost:5000';
+
   useEffect(() => {
-    fetch(`http://localhost:5000/api/league-matchups/${leagueId}`)
+    fetch(`${backendUrl}/api/league-matchups/${leagueId}`)
       .then((res) => res.json())
       .then((data) => {
         setMatchups(data.matchups);
