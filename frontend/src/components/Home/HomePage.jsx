@@ -15,16 +15,17 @@ function HomePage({ leagueId, userRosterId }) {
     brown: '#6f4f2e'
   };
 
+  const BACKEND_URL = 'https://loog-dynasty-wa.onrender.com';
   useEffect(() => {
-    fetch('/api/announcements')
-      .then(res => res.json())
-      .then(data => setMessages(data))
-      .catch(err => console.error('Error fetching announcements:', err));
-
-    fetch('/api/events')
-      .then(res => res.json())
-      .then(data => setEvents(data))
-      .catch(err => console.error('Error fetching events:', err));
+    fetch(`${BACKEND_URL}/api/announcements`)
+    .then(res => res.json())
+    .then(data => setMessages(data))
+    .catch(err => console.error('Error fetching announcements:', err));
+    
+    fetch(`${BACKEND_URL}/api/events`)
+    .then(res => res.json())
+    .then(data => setEvents(data))
+    .catch(err => console.error('Error fetching events:', err));
   }, []);
 
   return (
@@ -94,12 +95,12 @@ function HomePage({ leagueId, userRosterId }) {
           ×
         </button>
 
-        <a href="#" style={{ color: colors.gold, textDecoration: 'none', fontWeight: '600' }}>🏠 Home</a>
-        <a href="#" style={{ color: colors.gold, textDecoration: 'none', fontWeight: '600' }}>📋 Matchups (WIP)</a>
-        <a href="#" style={{ color: colors.gold, textDecoration: 'none', fontWeight: '600' }}>🙌 Hall Of Fame (WIP)</a>
-        <a href="#" style={{ color: colors.gold, textDecoration: 'none', fontWeight: '600' }}>📜 Constitution (WIP)</a>
-        <a href="#" style={{ color: colors.gold, textDecoration: 'none', fontWeight: '600' }}>📈 Analytics (WIP)</a>
-        <a href="#" style={{ color: colors.gold, textDecoration: 'none', fontWeight: '600' }}>💸 Payments (WIP)</a>
+        <button style={{ color: colors.gold, textDecoration: 'none', fontWeight: '600' }}>🏠 Home</button>
+        <button style={{ color: colors.gold, textDecoration: 'none', fontWeight: '600' }}>📋 Matchups (WIP)</button>
+        <button style={{ color: colors.gold, textDecoration: 'none', fontWeight: '600' }}>🙌 Hall Of Fame (WIP)</button>
+        <button style={{ color: colors.gold, textDecoration: 'none', fontWeight: '600' }}>📜 Constitution (WIP)</button>
+        <button style={{ color: colors.gold, textDecoration: 'none', fontWeight: '600' }}>📈 Analytics (WIP)</button>
+        <button style={{ color: colors.gold, textDecoration: 'none', fontWeight: '600' }}>💸 Payments (WIP)</button>
       </div>
 
       {/* Header with logo */}

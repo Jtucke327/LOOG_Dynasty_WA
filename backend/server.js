@@ -6,14 +6,14 @@ require('dotenv').config();
 const app = express();
 const PORT = process.env.PORT || 5000;
 
+app.set('trust proxy', 1);
 app.disable('x-powered-by');
-//Will update once I have domain name
-app.use(cors({
-  origin: ['https://your-frontend-domain.com'],
-}));
-app.use(express.json());
 
-// Use league-related API routes
+app.use(cors({
+  origin: 'https://league-of-ordinary-gentlemen.netlify.app'
+}));
+
+app.use(express.json());
 app.use('/api', leagueRoutes);
 
 app.listen(PORT, () => {
