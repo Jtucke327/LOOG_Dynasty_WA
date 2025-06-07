@@ -95,12 +95,12 @@ function HomePage({ leagueId, userRosterId }) {
           ×
         </button>
 
-        <a href="#" style={{ color: colors.gold, textDecoration: 'none', fontWeight: '600' }}>🏠 Home</a>
-        <a href="#" style={{ color: colors.gold, textDecoration: 'none', fontWeight: '600' }}>📋 Matchups (WIP)</a>
-        <a href="#" style={{ color: colors.gold, textDecoration: 'none', fontWeight: '600' }}>🙌 Hall Of Fame (WIP)</a>
-        <a href="#" style={{ color: colors.gold, textDecoration: 'none', fontWeight: '600' }}>📜 Constitution (WIP)</a>
-        <a href="#" style={{ color: colors.gold, textDecoration: 'none', fontWeight: '600' }}>📈 Analytics (WIP)</a>
-        <a href="#" style={{ color: colors.gold, textDecoration: 'none', fontWeight: '600' }}>💸 Payments (WIP)</a>
+        <button style={{ color: colors.gold, textDecoration: 'none', fontWeight: '600' }}>🏠 Home</button>
+        <button style={{ color: colors.gold, textDecoration: 'none', fontWeight: '600' }}>📋 Matchups (WIP)</button>
+        <button style={{ color: colors.gold, textDecoration: 'none', fontWeight: '600' }}>🙌 Hall Of Fame (WIP)</button>
+        <button style={{ color: colors.gold, textDecoration: 'none', fontWeight: '600' }}>📜 Constitution (WIP)</button>
+        <button style={{ color: colors.gold, textDecoration: 'none', fontWeight: '600' }}>📈 Analytics (WIP)</button>
+        <button style={{ color: colors.gold, textDecoration: 'none', fontWeight: '600' }}>💸 Payments (WIP)</button>
       </div>
 
       {/* Header with logo */}
